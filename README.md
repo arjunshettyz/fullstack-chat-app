@@ -26,6 +26,51 @@ fullstack-chat-app/
 
 ---
 
+## 🏛️ Architecture
+
+![Chat App Architecture](./ChatAppArchitecture.png)
+
+---
+
+# =============================
+#   Real-Time Chat App Flow
+# =============================
+
+# --- Frontend (React.js) ---
+Frontend/
+├── React App
+│   ├── Chat UI
+│   ├── Message Input Box
+│   ├── Message List Display
+│   └── Connects to Socket.IO Client
+└── Socket.IO Client
+    ├── Sends messages to backend
+    └── Receives real-time updates
+
+# --- WebSocket Communication Layer ---
+WebSocket (Socket.IO)
+├── Real-time message transmission
+└── Bi-directional event-based communication
+
+# --- Backend (Node.js + Express) ---
+Backend/
+├── Node.js + Express Server
+│   ├── Socket.IO Server
+│   │   ├── Handles client connections
+│   │   ├── Listens to messages
+│   │   └── Broadcasts messages to other clients
+│   └── (Optional) REST APIs (e.g., for loading chat history)
+├── In-Memory Storage (Optional)
+│   └── Store messages or connected users
+└── Optional Features
+    ├── Typing Indicator
+    └── User Online Status
+
+# --- Data Flow Summary ---
+# Frontend sends message ---> WebSocket ---> Backend
+# Backend broadcasts message ---> WebSocket ---> Frontend
+
+
 ## 🛠️ Installation & Setup Instructions
 
 ### 1. Clone the Repository
