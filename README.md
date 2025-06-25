@@ -31,7 +31,7 @@ fullstack-chat-app/
 ![Chat App Architecture](./ChatAppArchitecture.png)
 
 ---
-
+```
 # =============================
 #   Real-Time Chat App Flow
 # =============================
@@ -69,7 +69,7 @@ Backend/
 # --- Data Flow Summary ---
 # Frontend sends message ---> WebSocket ---> Backend
 # Backend broadcasts message ---> WebSocket ---> Frontend
-
+```
 
 ## 🛠️ Installation & Setup Instructions
 
